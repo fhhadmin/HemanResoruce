@@ -1,54 +1,83 @@
 export default {
   jurisdiction: [
     {
-      value: '用户管理',
+      value: '工资管理',
       expand: true,
-      title: '用户管理',
-      id: '用户管理',
+      title: '工资管理',
+      id: '工资管理',
       children: [
         {
-          value: '权限信息',
-          title: '权限信息',
-          id: '用户管理'
+          value: '薪酬管理',
+          title: '薪酬管理',
+          id: '工资管理'
+        },
+        {
+          value: '绩效考核',
+          title: '绩效考核',
+          id: '工资管理'
+        },
+        {
+          value: '考勤管理',
+          title: '考勤管理',
+          id: '工资管理'
         }
       ]
     },
     {
-      value: '项目用料',
+      value: '人事管理',
       expand: true,
-      title: '项目用料',
-      id: '项目用料',
+      title: '人事管理',
+      id: '人事管理',
       children: [
         {
-          value: '项目用料表',
-          title: '项目用料表',
-          id: '项目用料'
+          value: '人员信息',
+          title: '人员信息',
+          id: '人事管理'
+        },
+        {
+          value: '新聘员工',
+          title: '新聘员工',
+          id: '人事管理'
         }
       ]
     },
     {
-      value: '项目计划',
+      value: '档案管理',
       expand: true,
-      title: '项目计划',
-      id: '项目计划',
+      title: '档案管理',
+      id: '档案管理',
       children: [
         {
-          value: '项目计划表',
-          title: '项目计划表',
-          id: '项目计划'
-        }
-      ]
-    },
-    {
-      value: '仓库',
-      expand: true,
-      title: '仓库',
-      id: '仓库',
-      children: [
+          value: '基础档案',
+          title: '基础档案',
+          id: '档案管理',
+          children: [
+            {
+              value: '基础档案',
+              title: '基础档案',
+              id: '档案管理'
+            },
+            {
+              value: '合同档案',
+              title: '合同档案',
+              id: '档案管理'
+            },
+            {
+              value: '培训档案',
+              title: '培训档案',
+              id: '档案管理'
+            }
+          ]
+        },
         {
-          value: '仓库管理',
-          title: '仓库管理',
-          id: '仓库'
+          value: '合同档案',
+          title: '合同档案',
+          id: '档案管理'
+        },
+        {
+          value: '培训档案',
+          title: '培训档案',
+          id: '档案管理'
         }
       ]
     }

@@ -61,7 +61,7 @@ export default [
     path: '/userManagement',
     name: 'userManagement',
     meta: {
-      access: ['用户管理'],
+      // access: ['用户管理'],
       icon: '_gongren',
       title: '用户管理'
     },
@@ -71,7 +71,7 @@ export default [
         path: 'message',
         name: 'message',
         meta: {
-          access: ['权限信息'],
+          // access: ['权限信息'],
           icon: '_gongren',
           title: '权限信息'
         },
@@ -80,78 +80,160 @@ export default [
     ]
   },
   {
-    path: '/materialList',
-    name: 'materialList',
+    path: '/organization',
+    name: '组织架构管理',
     meta: {
-      access: ['项目用料'],
+      // access: ['shareSource'],
       icon: '_gongren',
-      title: '项目用料'
+      title: '组织架构管理'
     },
     component: Main,
     children: [
-      // {
-      //   path: 'material',
-      //   name: 'material',
-      //   meta: {
-      //     access: ['项目用料表'],
-      //     icon: '_gongren',
-      //     title: '项目用料表'
-      //   },
-      //   component: () => import('@/view/materialList/materialList.vue')
-      // },
       {
-        path: 'material2',
-        name: 'material2',
+        path: 'structure',
+        name: '组织架构管理',
         meta: {
-          access: ['项目用料表'],
+          // access: ['share'],
           icon: '_gongren',
-          title: '项目用料表'
+          title: '组织架构管理'
         },
-        component: () => import('@/view/materialList/materialList2.vue')
+        component: () => import('@/view/organization/structure.vue')
       }
     ]
   },
   {
-    path: '/projectPlan',
-    name: 'projectPlan',
+    path: '/personnelFiles',
+    name: '人事档案管理',
     meta: {
-      access: ['项目计划'],
+      // access: ['仓库'],
       icon: '_gongren',
-      title: '项目计划'
+      title: '人事档案管理'
     },
     component: Main,
     children: [
       {
-        path: 'planList',
-        name: 'planList',
-        meta: {
-          access: ['项目计划表'],
-          icon: '_gongren',
-          title: '项目计划表'
-        },
-        component: () => import('@/view/projectPlan/planList.vue')
-      }
-    ]
-  },
-  {
-    path: '/storeManagement',
-    name: 'storeManagement',
-    meta: {
-      access: ['仓库'],
-      icon: '_gongren',
-      title: '仓库'
-    },
-    component: Main,
-    children: [
-      {
-        path: 'storeManage',
-        name: 'storeManage',
+        path: 'basisFiles',
+        name: '基础档案',
         meta:{
-          access: ['仓库管理'],
+          // access: ['仓库管理'],
           icon: '_gongren',
-          title: '仓库管理'
+          title: '基础档案'
         },
-        component: () => import('@/view/storeManagement.vue')
+        component: () => import('@/view/personnelFiles/basisFiles.vue')
+      },
+      {
+        path: 'contractFiles',
+        name: 'contractFiles',
+        meta:{
+          // access: ['仓库管理'],
+          icon: '_gongren',
+          title: '合同档案'
+        },
+        component: () => import('@/view/personnelFiles/contractFiles.vue')
+      },
+      {
+        path: 'trainingFiles',
+        name: 'trainingFiles',
+        meta:{
+          // access: ['仓库管理'],
+          icon: '_gongren',
+          title: '培训档案'
+        },
+        component: () => import('@/view/personnelFiles/trainingFiles.vue')
+      }
+    ]
+  },
+  {
+    path: '/salaryManagement',
+    name: '薪资管理',
+    meta: {
+      // access: ['shareSource'],
+      icon: '_gongren',
+      title: '薪资管理'
+    },
+    component: Main,
+    children: [
+      {
+        path: 'salaryTable',
+        name: '薪资表',
+        meta: {
+          // access: ['share'],
+          icon: '_gongren',
+          title: '薪资表'
+        },
+        component: () => import('@/view/salaryManagement/salaryTable.vue')
+      },
+      {
+        path: 'customBenefits',
+        name: '自定义福利',
+        meta: {
+          // access: ['share'],
+          icon: '_gongren',
+          title: '自定义福利'
+        },
+        component: () => import('@/view/salaryManagement/customBenefits.vue')
+      },
+      {
+        path: 'paymentBase',
+        name: '缴费基数设置',
+        meta: {
+          // access: ['share'],
+          icon: '_gongren',
+          title: '缴费基数设置'
+        },
+        component: () => import('@/view/salaryManagement/paymentBase.vue')
+      }
+    ]
+  },
+  {
+    path: '/statistics',
+    name: '报表统计',
+    meta: {
+      // access: ['shareSource'],
+      icon: '_gongren',
+      title: '报表统计'
+    },
+    component: Main,
+    children: [
+      {
+        path: 'staffList',
+        name: '人员清单',
+        meta: {
+          // access: ['share'],
+          icon: '_gongren',
+          title: '人员清单'
+        },
+        component: () => import('@/view/statistics/staffList.vue')
+      },
+      {
+        path: 'salaryDetail',
+        name: '薪资明细',
+        meta: {
+          // access: ['share'],
+          icon: '_gongren',
+          title: '薪资明细'
+        },
+        component: () => import('@/view/statistics/salaryDetail.vue')
+      },
+      {
+        path: 'trainingHistory',
+        name: '培训历史',
+        meta: {
+          // access: ['share'],
+          icon: '_gongren',
+          title: '培训历史'
+        },
+        component: () => import('@/view/statistics/trainingHistory.vue')
+      },
+      {
+        path: 'attendance',
+        name: '考勤统计',
+        meta: {
+          // access: ['share'],
+          icon: '_gongren',
+          title: '考勤统计'
+        },
+        component: () => import('@/view/statistics/attendance.vue')
       }
     ]
   },

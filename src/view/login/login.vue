@@ -38,6 +38,12 @@ export default {
       'getUserInfo'
     ]),
     handleSubmit ({ userName, password }) {
+      setToken('token')
+      this.$router.push({
+        name: 'home'
+      })
+      console.log(11)
+      return
       this.handleLogin({ userName, password }).then(res => {
         this.getUserInfo().then(res => {
           this.$Message.success('欢迎登陆')
@@ -47,12 +53,6 @@ export default {
         })
       }).catch(err => {
         this.$Message.error(err)
-      })
-    },
-    // 工地入住
-    checkIn () {
-      this.$router.push({
-        name: 'checkIn'
       })
     },
     // 忘记密码

@@ -20,7 +20,8 @@
         </div>
         <div slot="footer">
           <Button @click="cancel">取消</Button>
-          <Button type="success" :loading="modal_loading" @click="confirm">确定</Button>
+          <Button v-if="btnState" type="success" :loading="modal_loading" @click="confirm">确定</Button>
+          <Button v-else type="success" :loading="modal_loading" @click="confirm" disabled>确定</Button>
         </div>
       </Modal>
     </div>
@@ -44,7 +45,8 @@ export default({
     }
   },
   props: {
-    userId: String
+    userId: String,
+    btnState: String
   },
   methods: {
     selectUp (e) {

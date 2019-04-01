@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Tree :data="dataTree" show-checkbox @on-check-change="getSelectTree" ref="Tree"></Tree>
+    <Tree :data="dataTree" :btnState="btnState" show-checkbox @on-check-change="getSelectTree" ref="Tree"></Tree>
   </div>
 </template>
 <script>
@@ -12,17 +12,27 @@ export default ({
     return {
       dataTree: clonedeep(permissionSetting.jurisdiction),
       selectList: [],
-      idValue: ''
+      idValue: '',
+      btnState: false
     }
   },
   props: {
     id: {
       type: String,
       required: true
+    },
+    btnState: {
+      type: String,
+      required: true
     }
   },
   methods: {
     getSelectTree (e) {
+      if(e.length === 0){
+        this.btnState = false
+      }else{
+        this.btnState = true
+      }
       let childrenListData = new Map()
       let fatherListData = new Map()
       let selectList = this.$refs.Tree.getCheckedAndIndeterminateNodes()
